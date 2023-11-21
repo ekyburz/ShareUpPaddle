@@ -1,6 +1,6 @@
-User.delete.all
-Booking.delete.all
-Board.delete.all
+User.delete_all
+Booking.delete_all
+Board.delete_all
 
 user1 = User.create(email: 'user1@example.com', password: 'password', first_name: 'Etienne', last_name: 'Kyburz')
 user2 = User.create(email: 'user2@example.com', password: 'password', first_name: 'Anh Nahm', last_name: 'Le Giang')
