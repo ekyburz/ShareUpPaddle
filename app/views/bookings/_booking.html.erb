@@ -1,5 +1,5 @@
 <div id="<%= dom_id booking %>">
-  <p><strong>Renter:</strong> <%=  %></p>
+  <p><strong>Renter:</strong> <%= booking.user&.first_name %></p>
   <p><strong>Board:</strong> <%= booking.board.name %></p>
   <p><strong>Owner:</strong> <%= booking.board.user.first_name %></p>
 </div>
