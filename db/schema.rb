@@ -19,13 +19,19 @@ ActiveRecord::Schema[7.1].define(version: 2023_11_21_094830) do
     t.boolean "availability"
     t.integer "price"
     t.text "description"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_boards_on_user_id"
   end
 
   create_table "bookings", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "board_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["board_id"], name: "index_bookings_on_board_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

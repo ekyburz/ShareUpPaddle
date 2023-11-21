@@ -5,6 +5,7 @@ class CreateBoards < ActiveRecord::Migration[7.1]
       t.boolean :availability
       t.integer :price
       t.text :description
+      t.references :user
 
       t.timestamps
     end
