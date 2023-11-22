@@ -1,0 +1,14 @@
+<h1><strong>My Boards</strong></h1>
+<% @boards.each do |board| %>
+
+<div class="card-product">
+<img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+  <div class="card-product-infos">
+    <h3><%= board.name %></h3>
+  </div>
+</div>
+<div class="buttons pb-3 pt-3">
+<%= link_to 'Details', board, class: "btn btn-primary" %>
+<%= link_to 'Delete', board_path(board), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-light" %>
+</div>
+<% end %>
