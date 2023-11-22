@@ -1,6 +1,8 @@
 class BoardsController < ApplicationController
   before_action :set_board, only: %i[show edit update destroy]
   skip_before_action :authenticate_user!, only: %i[index show]
+  before_action :authenticate_user!, only: %i[index show]
+  before_action :check_owner, only: %i[edit update destroy]
 
   # GET /boards or /boards.json
   def index
@@ -10,6 +12,26 @@ class BoardsController < ApplicationController
 
   # GET /boards/1 or /boards/1.json
   def show; end
+
+  # GET /myboards
+  def myboards
+    @boards = current_user.boards
+  end
+
+  def check_owner
+    set_board
+    unless @board.user == current_user
+      redirect_to boards_path, notice: 'You are not authorized to perform this action'
+    end
+  end
+
+  def destroy
+    @board.destroy
+    respond_to do |format|
+      format.html { redirect_to myboards_path, notice: 'Board was successfully deleted.' }
+      format.json { head :no_content }
+    end
+  end
 
   # GET /boards/new
   def new
