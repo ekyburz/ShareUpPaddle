@@ -2,13 +2,9 @@
 
 <h1>Boards</h1>
 
-<div id="boards">
+<div id="boards" class="d-flex">
   <% @boards.each do |board| %>
     <%= render board %>
-    <p>
-      <%= link_to "Show this board", board %>
-    </p>
-    <hr/>
   <% end %>
 </div>
 

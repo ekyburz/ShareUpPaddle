@@ -2,6 +2,9 @@ source "https://rubygems.org"
 
 ruby "3.1.2"
 
+# This library provides integration of the money gem with Rails [https://github.com/RubyMoney/money-rails]
+gem "money-rails"
+
 # Devise is a flexible authentication solution for Rails based on Warden [https://github.com/heartcombo/devise]
 gem "devise"
 

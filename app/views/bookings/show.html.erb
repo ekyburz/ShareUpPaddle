@@ -4,6 +4,6 @@
 
 <div>
   <%# <%= link_to "Edit this booking", edit_booking_path(@booking) | %>
-  <%= link_to "Back to bookings", bookings_path %>
+  <%= link_to "Back to bookings", bookings_path, class: "btn btn-primary" %>
   <%= button_to "Destroy this booking", @booking, method: :delete, class: "btn btn-primary mt-3" %>
 </div>
