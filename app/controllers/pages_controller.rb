@@ -5,7 +5,7 @@ class PagesController < ApplicationController
     @board = Board.new
   end
 
-  def myboards
+  def boards
     @user = current_user
     @boards = current_user.boards
   end
