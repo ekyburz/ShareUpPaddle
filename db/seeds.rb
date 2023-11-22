@@ -6,11 +6,11 @@ user1 = User.create!(email: 'user1@example.com', password: 'password', first_nam
 user2 = User.create!(email: 'user2@example.com', password: 'password', first_name: 'Anh Nam', last_name: 'Le Giang')
 user3 = User.create!(email: 'user3@example.com', password: 'password', first_name: 'Nicolas', last_name: 'Messer')
 
-board1 = Board.create(name: 'Surfboard', availability: true, price_sense: 100, description: 'A cool surfboard',
+board1 = Board.create(name: 'Surfboard', availability: true, price_cents: 100, description: 'A cool surfboard',
                       user: user1)
-board2 = Board.create(name: 'Paddleboard', availability: true, price_sense: 100, description: 'A not so cool Paddlboard',
+board2 = Board.create(name: 'Paddleboard', availability: true, price_cents: 100, description: 'A not so cool Paddlboard',
                       user: user1)
-board3 = Board.create(name: 'Queen Elisabeth', availability: true, price_sense: 100,
+board3 = Board.create(name: 'Queen Elisabeth', availability: true, price_cents: 100,
                       description: 'Yep its the ship allright', user: user2)
 
 booking = Booking.create(board: board1, user: user2)
