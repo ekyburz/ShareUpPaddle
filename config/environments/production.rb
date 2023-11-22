@@ -67,6 +67,9 @@ Rails.application.configure do
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
 
+  # Ensure you have defined default url options in your environments files.
+  config.action_mailer.default_url_options = { host: 'https://sup-ekyburz-6a33b84ed9da.herokuapp.com/' }
+
   # Use a real queuing backend for Active Job (and separate queues per environment).
   # config.active_job.queue_adapter = :resque
   # config.active_job.queue_name_prefix = "change_this_to_your_rails_app_name_production"

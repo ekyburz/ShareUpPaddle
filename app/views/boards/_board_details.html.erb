@@ -1,4 +1,4 @@
-<div id="<%= dom_id board %>" class="card-board mx-3">
+<div id="<%= dom_id board %>" class="card-board">
   <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
   <div class="card-board-infos">
     <div>
@@ -12,4 +12,28 @@
     <h2 class="card-board-pricing"><%= board.price.currency %> <%= board.price %></h2>
     <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-board-user avatar-bordered" />
   </div>
+</div>
+
+
+<div id="<%= dom_id board %>">
+  <p>
+    <strong>Name:</strong>
+    <%= board.name %>
+  </p>
+
+  <p>
+    <strong>Availability:</strong>
+    <%= board.availability %>
+  </p>
+
+  <p>
+    <strong>Price:</strong>
+    <%= board.price %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= board.description %>
+  </p>
+
 </div>

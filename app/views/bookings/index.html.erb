@@ -6,10 +6,10 @@
   <% @bookings.each do |booking| %>
     <%= render booking %>
     <p>
-      <%= link_to "Show this booking", booking %>
+      <%= link_to "Show this booking", booking, class: "btn btn-primary" %>
     </p>
     <hr/>
   <% end %>
 </div>
 
-<%= link_to "New booking", new_booking_path %>
+<%# <%= link_to "New booking", new_booking_path, class: "btn btn-primary" %>
