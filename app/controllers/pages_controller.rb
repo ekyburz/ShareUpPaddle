@@ -9,13 +9,4 @@ class PagesController < ApplicationController
     @user = current_user
     @boards = current_user.boards
   end
-
-  def destroy
-    @boards = current_user.boards
-    @board.destroy
-    respond_to do |format|
-      format.html { redirect_to myboards_path, notice: 'Board was successfully deleted.' }
-      format.json { head :no_content }
-    end
-  end
 end

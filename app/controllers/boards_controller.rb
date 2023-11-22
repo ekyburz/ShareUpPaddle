@@ -14,15 +14,19 @@ class BoardsController < ApplicationController
 
   def check_owner
     set_board
+    puts "Board user ID: #{@board.user.id}" if @board.user.present?
+    puts "Current user ID: #{current_user.id}" if current_user.present?
+
     return if @board.user == current_user
 
     redirect_to boards_path, notice: 'You are not authorized to perform this action'
   end
 
+  # DELETE /boards/1
   def destroy
     @board.destroy
     respond_to do |format|
-      format.html { redirect_to myboards_path, notice: 'Board was successfully deleted.' }
+      format.html { redirect_to boards_url, notice: 'Board was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
