@@ -3,8 +3,8 @@
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-  <%= f.input :board_id, disabled: true, hint: 'You cannot change the board.' %>
-  <%= f.input :user_id, disabled: true, hint: 'You cannot change the user.'%>
+  <%= f.input :board_id %>
+  <%= f.input :user_id %>
 
   <div class="form-inputs">
   </div>
