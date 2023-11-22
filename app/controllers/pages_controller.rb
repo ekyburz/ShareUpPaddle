@@ -9,4 +9,8 @@ class PagesController < ApplicationController
     @user = current_user
     @boards = current_user.boards
   end
+
+  def bookings
+    @bookings = Booking.all
+  end
 end

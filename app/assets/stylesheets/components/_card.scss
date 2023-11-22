@@ -1,3 +1,4 @@
+// Index Cards
 .card-board {
   overflow: hidden;
   background: white;
@@ -22,7 +23,6 @@
   margin: 0;
 }
 
-
 .card-board .card-board-infos {
   padding: 16px;
   display: flex;
@@ -36,4 +36,38 @@
   right: 16px;
   top: -20px;
   width: 40px;
+}
+
+// Detail Cards
+.card-details {
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+}
+
+.card-details img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.card-details h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-details p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-details .card-details-infos {
+  padding: 16px;
 }
