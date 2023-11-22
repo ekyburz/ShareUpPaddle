@@ -1,4 +1,3 @@
-// Specific CSS for your home-page
 .card-product {
   overflow: hidden;
   height: 120px;
@@ -6,7 +5,6 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
 }
 
 .card-product img {
@@ -16,13 +14,13 @@
 }
 
 .card-product h2 {
-  font-size: 24px;
+  font-size: 16px;
   font-weight: bold;
   margin: 0;
 }
 
 .card-product p {
-  font-size: 16px;
+  font-size: 12px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
@@ -31,8 +29,4 @@
 
 .card-product .card-product-infos {
   padding: 16px;
-}
-
-.btn btn-primary {
- margin-bottom: 20px;
 }
