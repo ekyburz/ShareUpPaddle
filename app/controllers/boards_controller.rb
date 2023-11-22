@@ -1,7 +1,6 @@
 class BoardsController < ApplicationController
   before_action :set_board, only: %i[show edit update destroy]
   skip_before_action :authenticate_user!, only: %i[index show]
-  before_action :authenticate_user!, only: %i[index show]
   before_action :check_owner, only: %i[edit update destroy]
 
   # GET /boards or /boards.json
@@ -20,9 +19,9 @@ class BoardsController < ApplicationController
 
   def check_owner
     set_board
-    unless @board.user == current_user
-      redirect_to boards_path, notice: 'You are not authorized to perform this action'
-    end
+    return if @board.user == current_user
+
+    redirect_to boards_path, notice: 'You are not authorized to perform this action'
   end
 
   def destroy
