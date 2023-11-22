@@ -9,6 +9,7 @@
 </div>
 <div class="buttons pb-3 pt-3">
 <%= link_to 'Details', board, class: "btn btn-primary" %>
-<%= link_to 'Delete', board_path(board), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-light" %>
+<%= link_to 'Delete', user_profile_path(@user, board), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+
 </div>
 <% end %>

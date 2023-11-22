@@ -12,11 +12,6 @@ class BoardsController < ApplicationController
   # GET /boards/1 or /boards/1.json
   def show; end
 
-  # GET /myboards
-  def myboards
-    @boards = current_user.boards
-  end
-
   def check_owner
     set_board
     return if @board.user == current_user
