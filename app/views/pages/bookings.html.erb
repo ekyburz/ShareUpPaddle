@@ -1,14 +1,16 @@
 <h1><strong>My Bookings</strong></h1>
-<% @bookings.each do |booking| %>
 
-<div class="card-product">
-<img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-  <div class="card-product-infos">
-    <h3><%= booking.board.name %></h3>
-    <p><strong>Renter:</strong> <%= booking.user.first_name %></p>
+<% @bookings.each do |booking| %>
+  <div class="card-details mb-3">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <div class="card-details-infos">
+        <h3><%= booking.board.name %></h3>
+        <p><strong>Renter:</strong> <%= booking.user.first_name %></p>
+      </div>
+      <div class="card-details-buttons p-3">
+        <%= link_to 'Delete', board_path(booking), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-warning" %>
+      </div>
   </div>
-  <div class="buttons">
-    <%= link_to 'Delete', board_path(booking), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-warning" %>
-  </div>
-</div>
 <% end %>
+
+<%= link_to "Back to Profile", user_profile_path, class: "btn btn-ghost mt-3" %>

@@ -40,6 +40,7 @@
 
 // Detail Cards
 .card-details {
+  position: relative;
   overflow: hidden;
   height: 120px;
   background: white;
@@ -70,4 +71,10 @@
 
 .card-details .card-details-infos {
   padding: 16px;
+}
+
+.card-details-buttons {
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
