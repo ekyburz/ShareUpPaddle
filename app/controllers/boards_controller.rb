@@ -22,15 +22,6 @@ class BoardsController < ApplicationController
     redirect_to boards_path, notice: 'You are not authorized to perform this action'
   end
 
-  # DELETE /boards/1
-  def destroy
-    @board.destroy
-    respond_to do |format|
-      format.html { redirect_to boards_url, notice: 'Board was successfully destroyed.' }
-      format.json { head :no_content }
-    end
-  end
-
   # GET /boards/new
   def new
     @board = Board.new
