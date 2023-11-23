@@ -5,18 +5,14 @@
 </div>
 
 <% @boards.each do |board| %>
-  <div class="card-product">
+  <div class="card-details mb-3">
     <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-    <div class="card-product-infos">
+    <div class="card-details-infos">
       <h3><%= board.name %></h3>
     </div>
-  </div>
-  <div class="buttons pb-3">
-  <div class="buttons d-flex pb-3 pt-3">
-  <%= link_to 'Details', board, class: "btn btn-primary me-2" %>
-  <%= button_to 'Delete', board, method: :delete, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-danger" %>
-</div>
-
-
+    <div class="card-details-buttons p-3">
+      <%= link_to 'Details', board, class: "btn btn-primary" %>
+      <%= button_to 'Delete', board, method: :delete, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-danger" %>
+    </div>
   </div>
 <% end %>
