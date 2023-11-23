@@ -5,8 +5,14 @@ class BoardsController < ApplicationController
 
   # GET /boards or /boards.json
   def index
-    @boards = Board.all
     @board = Board.new
+    @boards = Board.all
+  # The `geocoded` scope filters only boards with coordinates
+  @markers = @boards.geocoded.map do |board|
+    {
+      lat: board.latitude,
+      lng: board.longitude
+    }
   end
 
   # GET /boards/1 or /boards/1.json
