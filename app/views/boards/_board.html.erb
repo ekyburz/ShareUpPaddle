@@ -1,8 +1,12 @@
 <div id="<%= dom_id board %>" class="card-board mx-3">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+  <%# <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" /> %>
+  <% board.photos.each do |photo| %>
+    <%= cl_image_tag photo.key, crop: :fill %>
+  <% end %>
   <div class="card-board-infos">
     <div>
       <h2><%= board.name %></h2>
+      <p><%= board.id %></p>
       <p><%= board.description %></p>
       <p><strong>Availability: </strong><%= board.availability %></p>
       <p>
@@ -10,6 +14,8 @@
       </p>
     </div>
     <h2 class="card-board-pricing"><%= board.price.currency %> <%= board.price %></h2>
-    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-board-user avatar-bordered" />
+    <% if board.user && board.user.photo.attached? %>
+      <%= cl_image_tag board.user.photo.key, class: "card-board-user avatar-bordered" %>
+    <% end %>
   </div>
 </div>
