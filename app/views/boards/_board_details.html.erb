@@ -5,8 +5,35 @@
       <h2><%= board.name %></h2>
       <p><%= board.description %></p>
       <p><strong>Availability: </strong><%= board.availability %></p>
+      <p>
+        <%= link_to "Show this board", board, class: "btn btn-flat" %>
+      </p>
     </div>
     <h2 class="card-board-pricing"><%= board.price.currency %> <%= board.price %></h2>
     <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-board-user avatar-bordered" />
   </div>
+</div>
+
+
+<div id="<%= dom_id board %>">
+  <p>
+    <strong>Name:</strong>
+    <%= board.name %>
+  </p>
+
+  <p>
+    <strong>Availability:</strong>
+    <%= board.availability %>
+  </p>
+
+  <p>
+    <strong>Price:</strong>
+    <%= board.price %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= board.description %>
+  </p>
+
 </div>
