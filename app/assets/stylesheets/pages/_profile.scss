@@ -1,35 +1,7 @@
-.card-product {
-  overflow: hidden;
-  height: 120px;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  display: flex;
-  align-items: center;
+.card-details.profile-details {
   margin-bottom: 20px;
-}
-
-.card-product img {
-  height: 100%;
-  width: 120px;
-  object-fit: cover;
 }
 
 .card-details.profile-details h2 {
   font-size: 24px;
-}
-
-.card-product p {
-  font-size: 16px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
-}
-
-.card-product .card-product-infos {
-  padding: 16px;
-}
-
-.btn btn-primary {
- margin-bottom: 20px;
 }
