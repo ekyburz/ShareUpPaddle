@@ -47,4 +47,8 @@ board3.photos.attach(
   io: URI.open('https://images.pexels.com/photos/1656662/pexels-photo-1656662.jpeg?auto=compress&cs=tinysrgb&w=1200'), filename: 'picture3.jpg'
 )
 
+booking1 = Booking.create!(user: user2, board: board1)
+booking2 = Booking.create!(user: user2, board: board2)
+booking3 = Booking.create!(user: user3, board: board3)
+
 puts 'Seed data created successfully!'
