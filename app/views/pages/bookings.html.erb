@@ -5,7 +5,10 @@
 
 <% @bookings.each do |booking| %>
   <div class="card-details mb-3">
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+    <%# <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" /> %>
+     <% booking.board.photos.each do |photo| %>
+    <%= cl_image_tag photo.key, crop: :fill %>
+    <% end %>
       <div class="card-details-infos">
         <h3><%= booking.board.name %></h3>
         <p><strong>Renter:</strong> <%= booking.user.first_name %></p>
