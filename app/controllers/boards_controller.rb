@@ -34,6 +34,7 @@ class BoardsController < ApplicationController
   def create
     puts 'inside create method'
     @board = Board.new(board_params)
+    @board.user = current_user
 
     puts @board.inspect
 

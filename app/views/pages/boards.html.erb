@@ -12,7 +12,7 @@
     </div>
     <div class="card-details-buttons p-3">
       <%= link_to 'Details', board, class: "btn btn-primary" %>
-      <%= button_to 'Delete', board, method: :delete, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-danger" %>
+      <%= link_to 'Delete', board, method: :delete, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-danger" %>
     </div>
   </div>
 <% end %>

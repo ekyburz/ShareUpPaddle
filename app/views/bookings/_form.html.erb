@@ -3,8 +3,8 @@
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-  <%= f.input :board_id %>
-  <%= f.input :user_id %>
+  <%= f.association :board, selected: :board_id %>
+  <%= f.association :user, selected: :user_id %>
 
   <div class="form-inputs">
   </div>
