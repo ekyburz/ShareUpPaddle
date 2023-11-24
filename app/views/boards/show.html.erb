@@ -6,8 +6,10 @@
 
 <%= render "boards/board_details", board: @board %>
 
-<div class="d-flex">
+
   <%# <%= link_to "Edit this board", edit_board_path(@board) | %>
+
+  <div class="d-flex justify-left  mb-3">
   <% if user_signed_in? %>
     <div data-controller="toggle" class="mt-3 px-2">
       <button data-action="click->toggle#fire" class="btn btn-outline-primary">Update board</button>
@@ -15,16 +17,15 @@
         <%= render "form", board: @board %>
       </div>
     </div>
-    <div data-controller="toggle" class="mt-3 px-2">
-      <button data-action="click->toggle#fire" class="btn btn-outline-primary">New booking</button>
-      <div data-toggle-target="togglableElement" class="d-none mt-3">
-        "TEST"
-      </div>
-    </div>
-    <div data-controller="toggle" class="mt-3">
-      <%= link_to "New booking", new_booking_path, class: "btn btn-outline-primary" %>
-    </div>
-  <% end %>
+    <div class="d-flex">
+  <div data-controller="toggle" class="mt-3">
+    <button data-action="click->toggle#fire", class="btn btn-flat">New Booking</button>
+    <div data-toggle-target="togglableElement" class="d-none">
+      <%= render "bookings/form", booking: @booking %>
 
+    </div>
+
+  <% end %>
+</div>
   <%# <%= button_to "Destroy this board", @board, method: :delete %>
 </div>

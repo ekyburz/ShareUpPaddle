@@ -3,13 +3,19 @@
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-  <%= f.association :board, selected: :board_id %>
-  <%= f.association :user, selected: :user_id %>
+  <%= f.association :board, selected: :board_id, wrapper_html: { hidden: true } %>
+    <p>
+      <strong>Availability:</strong> <%= @booking.board.availability ? 'Your board is available' : 'Your board is not available' %>
+    </p>
+
+
+  <%= f.association :user, selected: :user_id, wrapper_html: { hidden: true } %>
 
   <div class="form-inputs">
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, class: "btn btn-primary" %>
+  <%= f.button :submit, class: "btn btn-flat", value: "Book now!" %>
+
   </div>
 <% end %>
