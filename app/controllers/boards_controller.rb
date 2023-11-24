@@ -7,6 +7,15 @@ class BoardsController < ApplicationController
   def index
     @boards = Board.all
     @board = Board.new
+
+    @markers = @boards.geocoded.map do |paddle|
+      {
+        lat: paddle.latitude,
+        lng: paddle.longitude,
+        info_window_html: render_to_string(partial: 'info_window', locals: { paddl: paddle }),
+        marker_html: render_to_string(partial: 'marker', locals: { paddle: })
+      }
+    end
   end
 
   # GET /boards/1 or /boards/1.json
@@ -82,6 +91,6 @@ class BoardsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def board_params
-    params.require(:board).permit(:name, :availability, :price, :description)
+    params.require(:board).permit(:name, :availability, :price, :description, :address, photos: [])
   end
 end
