@@ -1,2 +1,5 @@
 <h1><%= paddl.name %></h1>
-<p><%= paddl.address %></p>
+<p>Host: <%= paddl.user.first_name %> <%= paddl.user.last_name %></p>
+<p>Address: <%= paddl.address %></p>
+<p>Price: <%= paddl.price_cents %></p>
+<%= link_to "Show this board", paddl, class: "btn btn-primary" %>

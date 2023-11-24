@@ -5,6 +5,10 @@ ruby '3.1.2'
 # This library provides integration of the money gem with Rails [https://github.com/RubyMoney/money-rails]
 gem 'money-rails'
 
+gem 'dotenv-rails', groups: %i[development test]
+
+# Geocoder is a complete geocoding solution for Ruby [
+
 gem 'geocoder'
 
 # Devise is a flexible authentication solution for Rails based on Warden [https://github.com/heartcombo/devise]
