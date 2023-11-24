@@ -1,5 +1,5 @@
 // Index Cards
-.card-board {
+.card-board, .card-board-single {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -11,19 +11,25 @@
   object-fit: cover;
 }
 
-.card-board h2 {
+.card-board-single > img {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-board h2, .card-board-single h2 {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
 }
 
-.card-board p {
+.card-board p, .card-board-single p {
   font-size: 12px;
   opacity: .7;
   margin: 0;
 }
 
-.card-board .card-board-infos {
+.card-board .card-board-infos, .card-board-single .card-board-infos {
   padding: 16px;
   display: flex;
   justify-content: space-between;
@@ -31,7 +37,11 @@
   position: relative;
 }
 
-.card-board-infos .card-board-user {
+.card-board-infos a.btn {
+  margin: 5px 5px 0 0;
+}
+
+.card-board-infos .card-board-user, .card-board-single .card-board-user {
   position: absolute;
   right: 16px;
   top: -20px;
