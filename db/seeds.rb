@@ -31,7 +31,7 @@ user3.photo.attach(
 
 board1 = Board.create(name: 'Surfboard', availability: true, price_cents: 100, description: 'A cool surfboard',
                       user: user1, address: 'Zürcher Yacht Club')
-board2 = Board.create(name: 'Paddleboard', availability: true, price_cents: 100,
+board2 = Board.create(name: 'Paddleboard', availability: false, price_cents: 100,
                       description: 'A not so cool Paddlboard', user: user1, address: 'Wollishofen')
 board3 = Board.create(name: 'Queen Elisabeth', availability: true, price_cents: 100,
                       description: 'Yep its the ship allright', user: user2, address: 'Strandbad Tiefenbrunnen')
