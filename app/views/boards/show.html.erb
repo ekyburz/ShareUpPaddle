@@ -1,7 +1,7 @@
 <p style="color: green"><%= notice %></p>
 
-<div class="d-flex justify-content-between align-items-center mb-3">
-  <%= link_to "Back to boards", root_path, class: "btn btn-flat mt-3" %>
+<div class="sup-tar mb-3">
+  <%= link_to "Back to boards", root_path, class: "btn btn-primary mt-3" %>
 </div>
 
 <%= render "boards/board_details", board: @board %>
@@ -28,5 +28,4 @@
   <% end %>
 </div>
   <%# <%= button_to "Destroy this board", @board, method: :delete %>
-</div>
 </div>

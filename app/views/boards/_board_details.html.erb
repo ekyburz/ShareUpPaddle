@@ -1,4 +1,4 @@
-<div id="<%= dom_id board %>" class="card-board">
+<div id="<%= dom_id board %>" class="card-board-single">
 
   <% board.photos.each do |photo| %>
     <%= cl_image_tag photo.key, crop: :fill %>
@@ -7,9 +7,17 @@
     <div>
       <h2><%= board.name %></h2>
       <p><%= board.description %></p>
-      <p><strong>Availability: </strong><%= board.availability %></p>
+      <p><strong>Availability:
+        <% if board.availability %>
+          </strong><i class="fa-solid fa-circle-check"></i>
+        <% else %>
+          </strong><i class="fa-solid fa-circle-xmark"></i>
+        <% end %>
+      </p>
     </div>
     <h2 class="card-board-pricing"><%= board.price.currency %> <%= board.price %></h2>
-    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-board-user avatar-bordered" />
+    <% if board.user && board.user.photo.attached? %>
+      <%= cl_image_tag board.user.photo.key, class: "card-board-user avatar-bordered" %>
+    <% end %>
   </div>
 </div>

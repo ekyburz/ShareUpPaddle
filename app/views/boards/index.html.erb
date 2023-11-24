@@ -1,18 +1,12 @@
 <p style="color: green"><%= notice %></p>
 
-
-<h1><strong>Boards</strong></h1>
-
-
-
 <div class="mx-auto" style="width: 70%; height: 600px;"
   data-controller="map"
   data-map-markers-value="<%= @markers.to_json %>"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-  <br>
-  <br>
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+</div>
 
-
+<h1>All Our Boards</h1>
 
 <div id="boards" class="d-flex">
   <% @boards.each do |board| %>
@@ -21,4 +15,3 @@
 </div>
 
 <%# <%= link_to "New board", new_board_path %>
-
