@@ -1,7 +1,9 @@
 <h1><strong>Profile Page</strong></h1>
 
 <div class="card-details profile-details">
-  <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier" %>
+  <%# <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier" %>
+  <%# Image from cloudinary %>
+  <%= cl_image_tag @user.photo.key, class: "card-details-img" %>
   <div class="card-details-infos">
     <h2>User Info</h2>
     <p><%= @user.first_name %>  <%= @user.last_name %></p>
