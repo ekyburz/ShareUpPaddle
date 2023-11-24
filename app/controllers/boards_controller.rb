@@ -19,7 +19,9 @@ class BoardsController < ApplicationController
   end
 
   # GET /boards/1 or /boards/1.json
-  def show; end
+  def show
+    @booking = Booking.new(board: @board)
+  end
 
   def check_owner
     set_board
