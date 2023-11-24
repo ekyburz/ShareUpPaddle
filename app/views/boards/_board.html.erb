@@ -1,5 +1,7 @@
 <div id="<%= dom_id board %>" class="card-board mx-3">
-  <%= cl_image_tag board.photos.key, crop: :fill %>
+  <% board.photos.each do |photo| %>
+    <%= cl_image_tag photo.key, crop: :fill %>
+  <% end %>
   <div class="card-board-infos">
     <div>
       <h2><%= board.name %></h2>

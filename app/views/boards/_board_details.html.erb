@@ -1,5 +1,5 @@
 <div id="<%= dom_id board %>" class="card-board">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+
   <% board.photos.each do |photo| %>
     <%= cl_image_tag photo.key, crop: :fill %>
   <% end %>
