@@ -62,7 +62,6 @@ gem 'font-awesome-sass', '~> 6.1'
 gem 'sassc-rails'
 gem 'simple_form', github: 'heartcombo/simple_form'
 
-gem "dotenv-rails"
 gem "cloudinary"
 
 group :development, :test do
